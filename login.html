@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login-style.css" class="css" />
+    <title>Spotify for you</title>
+  </head>
+  <body>
+    <div class="login-page">
+      <header class="status-bar">
+        <img
+          src="https://www.pngkey.com/png/full/190-1907978_spotify-logo-png-white-spotify-logo-white-transparent.png"
+        />
+      </header>
+      <div class="login-box">
+        <div class="login-box__contents">
+          <section class="greeting">
+            <h1 class="greeting__text">Log in to Spotify</h1>
+
+            <nav class="continue">
+              <div class="continue__column">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png"
+                  alt="login with google"
+                />
+                <span class="continue__text">Continue with Google</span>
+              </div>
+
+              <div class="continue__column">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
+                  alt="login with facebook"
+                />
+                <span class="continue__text">Continue with Facebook</span>
+              </div>
+
+              <div class="continue__column">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Apple_logo_white.svg/640px-Apple_logo_white.svg.png"
+                  alt="login with apple"
+                />
+                <span class="continue__text">Continue with Apple</span>
+              </div>
+            </nav>
+          </section>
+
+          <section class="login__form">
+            <form action="main.html" method="post" class="login-input">
+              <div class="userinfo username">
+                <h3 class="login-input__text">Email or username</h3>
+                <input type="text" required placeholder="Email or username" />
+              </div>
+
+              <div class="userinfo password">
+                <h3 class="login-input__text">Password</h3>
+                <input type="password" required placeholder="Password" />
+              </div>
+
+              <div class="toggle">
+                <i class="fa-solid fa-toggle-on fa-lg"></i>
+                <!-- <i class="fa-solid fa-toggle-off fa-lg"></i> -->
+                <span>Remember me</span>
+              </div>
+
+              <div class="login-btn">
+                <button>Log in</button>
+              </div>
+
+              <a href="#">Forgot your password?</a>
+            </form>
+            <footer>
+              <span>Don't have an account?</span>
+              <a href="#">Sign up for Spotify</a>
+            </footer>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/3094465d0e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

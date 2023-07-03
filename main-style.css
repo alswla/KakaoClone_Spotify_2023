@@ -1,0 +1,482 @@
+@import "./variable.css";
+@import "./reset.css";
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  color: white;
+}
+.main-page {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-contents__left {
+  min-width: 30%;
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.nav-bar {
+  width: 30%;
+  /* overflow: scroll; */
+  white-space: nowrap;
+  position: fixed;
+  padding: 20px 20px;
+}
+
+.nav-bar__btn {
+  width: 100%;
+  padding: 25px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: rgba(57, 57, 57, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 800;
+}
+.nav-bar__btn div > i {
+  font-size: 20px;
+}
+.home {
+  margin-bottom: 20px;
+}
+.nav-bar__text {
+  margin-left: 15px;
+}
+
+.library {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(57, 57, 57, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-top: 20px;
+
+  overflow: hidden;
+}
+
+/* 화면 작아지면 화살표는 없어짐 */
+.library__btn {
+  font-size: 18px;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.library__btn-left i {
+  margin-right: 10px;
+}
+.library__btn-right {
+  margin-left: 50px;
+}
+.library__btn-right i:first-child {
+  margin-right: 20px;
+}
+
+.library-filter {
+  min-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 0px;
+
+  overflow: hidden;
+}
+.library-filter__text {
+  margin-bottom: 30px;
+}
+.library-filter__text > span {
+  margin-right: 5px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  background-color: var(--grey);
+  text-align: center;
+}
+
+.library-filter__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.library-filter__btn-right {
+  margin-left: 100px;
+}
+.library-filter__btn-right > span {
+  font-size: 15px;
+}
+.library-filter__btn-right > i {
+  margin-left: 5px;
+}
+
+.library-list {
+  width: 100%;
+  height: auto;
+  /* overflow-y: scroll; */
+  padding: 10px 0px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.library-list__track {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.library-list__track__img > img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+.library-list__track__info {
+  width: 100%;
+  padding: 0px 10px;
+  overflow: hidden;
+  /* 한줄로만 나온 텍스트로 인해 생기는 스크롤 안보이게 */
+}
+.song {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  /* 텍스트 한줄로만 나오게 */
+}
+.singer {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.main-contents__right {
+  min-width: 70%;
+  height: 100%;
+  margin: 20px 20px;
+  background-color: var(--grey);
+  border-radius: 10px;
+
+  background-image: url("https://img.buzzfeed.com/buzzfeed-static/complex/images/wujpwni84kwzxje8sooi/billie-eilish-press-photo-2021.jpg?output-format=jpg&output-quality=auto");
+  background-size: contain;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 50px 20px;
+  position: fixed;
+  display: flex;
+  width: 70%;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  margin-right: 5px;
+}
+
+.status-bar__left > span {
+  padding: 10px 10px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.status-bar__right {
+  margin-right: 30px;
+}
+.usericon {
+  padding: 10px 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.status-bar__text {
+  padding: 10px 15px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-right: 5px;
+  text-align: center;
+}
+
+.curations-top {
+  height: 600px;
+  position: relative;
+  margin-bottom: 50px;
+  padding: 0px 20px;
+}
+.artist-profile {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+.verified {
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.artist-profile > h1 {
+  font-size: 100px;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+.artist-profile > h2 {
+  font-size: 23px;
+}
+
+.curations {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(28, 27, 27, 0.9) 0%,
+    rgb(28, 27, 27) 5%,
+    rgb(0, 0, 0) 100%
+  );
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+.artist-page__popular {
+  width: 100%;
+  display: flex;
+  margin-bottom: 40px;
+}
+.popular-btn__play {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--green);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  font-size: 25px;
+  text-align: center;
+}
+.popular-btn__follow {
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+}
+.popular-btn__follow span:first-child {
+  padding: 10px 15px;
+  border: 0.3px solid rgba(255, 255, 255, 0.6);
+  text-align: center;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-right: 30px;
+}
+.popular-btn__follow span:last-child {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.popular-song {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.popular-song > h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.popular-song__tracks {
+  width: 100%;
+  height: 400px;
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.track-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.track-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.track-info__left {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.track-info__right {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+  font-size: 18px;
+  padding: 0px 10px;
+}
+.track-info h3:first-child {
+  padding: 0px 20px;
+  /* 가장 밑 See more span의 padding값과 동일하게 지정해야함 */
+  color: var(--white);
+}
+.track-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.seemore {
+  font-size: 18px;
+  color: var(--white);
+  padding: 20px 20px;
+  font-weight: 600;
+}
+
+.artist-pick {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.artist-pick h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.artist-pick__contents {
+  display: flex;
+}
+.artist-pick__img > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+}
+.artist-pick__info {
+  width: 300px;
+  height: 150px;
+  padding: 0px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posted-by {
+  font-size: 20px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.posted-by > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.posted-by > span {
+  padding: 0px 10px;
+}
+
+.subject {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+.subtitle {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.discography {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.discography__tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+}
+.discography__tab > h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.discography__tab > span {
+  color: var(--white);
+  font-size: 18px;
+}
+.discography__btns {
+  margin: 10px 0px;
+}
+.discography__btns span {
+  padding: 15px 15px;
+  background-color: var(--grey);
+  font-size: 18px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+.discography__groups {
+  width: 100%;
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.discography-track {
+  width: 220px;
+  height: 300px;
+
+  background-color: rgba(57, 57, 57, 0.3);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0px 10px;
+  padding: 10px 10px;
+}
+.discography-track > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.discography__info {
+  width: 200px;
+  padding: 10px 0px;
+}
+.discography__subject {
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+.discography__subtitle {
+  font-size: 18px;
+  color: var(--white);
+}

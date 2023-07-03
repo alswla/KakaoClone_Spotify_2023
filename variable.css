@@ -1,0 +1,8 @@
+:root {
+  --login-height: 70vh;
+  --login-width: calc((var(--login-height)) / 1.5);
+
+  --grey: rgba(57, 57, 57, 0.6);
+  --green: #1ad760;
+  --white: rgba(255, 255, 255, 0.6);
+}
