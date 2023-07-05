@@ -16,7 +16,7 @@ body {
     display: block;
   }
 
-  header img {
+  .status-bar > img {
     width: 130px;
     height: 40px;
     margin: 20px 20px;
